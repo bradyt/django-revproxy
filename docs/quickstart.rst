@@ -48,9 +48,9 @@ And now add your view in the ``urls.py``:
 
     from myapp.views import TestProxyView
 
-    urlpatterns = patterns('', 
+    urlpatterns = [
         url(r'^(?P<path>.*)$', TestProxyView.as_view()),
-    )
+    ]
 
 Alternatively you could just use the default ProxyView as follow:
 
@@ -58,9 +58,9 @@ Alternatively you could just use the default ProxyView as follow:
 
     from revproxy.views import ProxyView
 
-    urlpatterns = patterns('', 
+    urlpatterns = [
         url(r'^(?P<path>.*)$', ProxyView.as_view(upstream='http://example.com/')),
-    )
+    ]
 
 
 
