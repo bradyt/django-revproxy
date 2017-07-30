@@ -17,9 +17,9 @@ This document covers the views provided by ``revproxy.views`` and all it's publi
 
         from revproxy.views import ProxyView
 
-        urlpatterns = patterns('',
+        urlpatterns = [
             url(r'^(?P<path>.*)$', ProxyView.as_view(upstream='http://example.com/')),
-        )
+        ]
 
 
     **Attributes**
